@@ -28,13 +28,13 @@
   "dependencies": {
     "ee-class": "^1.0.8",
     "worker-farm": "^1.0.1",
-    "progress": "^1.1.8",
     "progress-stream": "^0.5.0",
     "url": "^0.10.1",
     "docopt": "^0.4.0",
     "fluent-ffmpeg": "^2.0.0-rc1",
     "dlvid-core": "git+https://github.com/web-mech/dlvid-core.git#master",
-    "async": "^0.9.0"
+    "async": "^0.9.0",
+    "progress-bar": "^0.1.1"
   },
   "devDependencies": {
     "better-assert": "^1.0.1",
