@@ -53,8 +53,7 @@ if (argv.info) {
       console.log(data);
       progress++;
       if (progress === urls.length) {
-        workerFarm.end(workers.download);
-        process.exit(0);
+        workerFarm.end(workers.info);
       }
     });
   });
