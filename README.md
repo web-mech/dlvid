@@ -2,8 +2,6 @@
 
 [![Build Status](https://travis-ci.org/web-mech/dlvid.png?branch=master)](https://travis-ci.org/web-mech/dlvid)
 
-(Ver. 0.8.0)
-
 DLVid is a cli tool for downloading web clips (similar to youtube-dl).
 
 
