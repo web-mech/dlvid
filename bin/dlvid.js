@@ -2,6 +2,7 @@
 
 var docopt = require('docopt').docopt,
   fs = require('fs'),
+  ProgressBar = require('progress-bar'),
   workerFarm = require('worker-farm'),
   workers = {
     download: workerFarm(require.resolve('../lib/workers/lib/download')),
@@ -21,13 +22,21 @@ if (argv['--version']) {
 
 
 if (argv.download) {
+  var bar = ProgressBar.create(process.stdout);
+  bar.format = '$bar; $percentage;% Downloaded.';
+  var complete = argv['<url>'].length;
+  var progress = 0;
+  bar.update(0);
+  var out = argv['--directory']+argv['--prefix']+'-'+argv['--output']+'-';
   argv['<url>'].forEach(function(url, index, urls) {
-    workers.download(url, null, function(err, data) {
+    workers.download(url, out, function(err) {
       if (err) {
         console.error(err);
-        return;
       }
-      if (index + 1 === urls.length) {
+      progress++;
+      bar.update(progress /  complete);
+      if (progress === urls.length) {
+        console.log();
         workerFarm.end(workers.download);
       }
     });
@@ -35,5 +44,18 @@ if (argv.download) {
 }
 
 if (argv.info) {
-  
+  var progress = 0;
+  argv['<url>'].forEach(function(url, index, urls) {
+    workers.info(url, function(err, data) {
+      if (err) {
+        console.error(err);
+      }
+      console.log(data);
+      progress++;
+      if (progress === urls.length) {
+        workerFarm.end(workers.download);
+        process.exit(0);
+      }
+    });
+  });
 }

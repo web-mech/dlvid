@@ -2,7 +2,7 @@ DLVid. Download videos from websites.
 (c) 2014 by Michael Price, MIT License
 
 Usage:
-  dlvid download <url>... [--names=<names>...] [--format=<codec>] [--output=<file>] [--directory=<directory>]
+  dlvid download <url>... [--prefix=<prefix>] [--output=<file>] [--directory=<directory>]
   dlvid info <url> ...
   dlvid -h | --help
   dlvid --version
@@ -10,7 +10,6 @@ Usage:
 Options:
   -h --help                  Show this screen.
   -v --version               Show the current version.
-  -n --names=<names>         The output names.
-  -f --format=<codec>        The format in which the video should be returned if available.
-  -o --output=<file>         The destination the file should be sent to if it's a single file [default: ./video.mp4].
-  -d --directory=<directory> The directory the files should be placed in if mulitple files are being retreived (files are autonamed)
+  -p --prefix=<prefix>       Prefix output files [default: dlvid].
+  -o --output=<file>         The destination the file should be sent to if it's a single file [default: vid].
+  -d --directory=<directory> The directory the files should be placed in if mulitple files are being retreived  [default: ./].
