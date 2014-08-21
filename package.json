@@ -1,6 +1,6 @@
 {
   "name": "dlvid",
-  "version": "0.8.3",
+  "version": "0.8.4",
   "description": "Download videos from the command line",
   "bin": {
     "dlvid": "bin/dlvid.js"
