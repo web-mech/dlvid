@@ -1,6 +1,6 @@
 {
   "name": "dlvid",
-  "version": "0.8.2-1",
+  "version": "0.8.3",
   "description": "Download videos from the command line",
   "bin": {
     "dlvid": "bin/dlvid.js"
@@ -13,6 +13,7 @@
     "url": "git://github.com/web-mech/dlvid.git"
   },
   "keywords": [
+
     "download",
     "videos",
     "youtube",
