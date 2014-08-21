@@ -13,14 +13,16 @@
     "url": "git://github.com/web-mech/dlvid.git"
   },
   "keywords": [
-
-    "download",
-    "videos",
+    "video",
+    "source",
     "youtube",
+    "dailymotion",
     "vimeo",
-    "cli"
+    "online",
+    "embed",
+    "download"
   ],
-  "author": "webmech <webmech@gmail.com>",
+  "author": "Michael Price",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/web-mech/dlvid/issues"
@@ -30,7 +32,7 @@
     "ee-class": "^1.0.8",
     "worker-farm": "^1.0.1",
     "docopt": "^0.4.0",
-    "dlvid-core": "git+https://github.com/web-mech/dlvid-core.git#master",
+    "dlvid-core": "^1.3.5",
     "async": "^0.9.0",
     "progress-bar": "^0.1.1"
   },
